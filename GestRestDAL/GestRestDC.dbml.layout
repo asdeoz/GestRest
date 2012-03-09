@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GestRestDC">
+  <DataContextMoniker Name="/GestRestDCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9aaf9ffd-23fc-433a-b85c-73cdac991547" absoluteBounds="2.625, 2.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/GestRestDCDataContext/Reserva" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2aa5946f-d7d3-4d47-9524-a5b610b7c7cc" absoluteBounds="2.64, 2.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
