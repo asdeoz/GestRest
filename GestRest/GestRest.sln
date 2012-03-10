@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestRest", "GestRest.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestRestDAL", "..\GestRestDAL\GestRestDAL.csproj", "{A1D2D2FC-044D-4C75-9C43-EC81E4DA675D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "..\Utils\Utils.csproj", "{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{A1D2D2FC-044D-4C75-9C43-EC81E4DA675D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A1D2D2FC-044D-4C75-9C43-EC81E4DA675D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A1D2D2FC-044D-4C75-9C43-EC81E4DA675D}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

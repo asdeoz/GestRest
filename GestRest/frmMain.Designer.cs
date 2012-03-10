@@ -59,7 +59,7 @@
             // tsmiReservas
             // 
             this.tsmiReservas.Name = "tsmiReservas";
-            this.tsmiReservas.Size = new System.Drawing.Size(152, 22);
+            this.tsmiReservas.Size = new System.Drawing.Size(119, 22);
             this.tsmiReservas.Text = "Reserves";
             this.tsmiReservas.Click += new System.EventHandler(this.tsmiReservas_Click);
             // 

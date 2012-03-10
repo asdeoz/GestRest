@@ -90,6 +90,10 @@
       <Project>{A1D2D2FC-044D-4C75-9C43-EC81E4DA675D}</Project>
       <Name>GestRestDAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{9C5CCE7F-D06C-4FCB-B382-0F483A20F631}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recursos\GestRestIcon.ico" />

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Utils;
 
 namespace GestRest
 {
@@ -31,6 +32,11 @@ namespace GestRest
                 frmMain oFrmMain = (frmMain)this.MdiParent;
                 oFrmMain.TlpMain.Visible = true;
             }
+        }
+
+        private void dlgCalendario_Load(object sender, EventArgs e)
+        {
+            this.tlpCenter.Controls.Add(new DateButton(DateTime.Now),2, 2);
         }
     }
 }
