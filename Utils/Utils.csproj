@@ -45,6 +45,9 @@
     <Compile Include="DateButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExtClasses.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,13 +20,22 @@ namespace Utils
         }
 
         public DateButton()
-        { }
+        {
+            this.Enabled = false;
+        }
 
         public DateButton(DateTime newDate)
         {
             this.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            if (newDate.Date == DateTime.Now.Date)
+            {
+                this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+            else
+            {
+                this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             this.Date = newDate;
         }
     }

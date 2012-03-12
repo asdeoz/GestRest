@@ -17,7 +17,7 @@ namespace GestRest
         public DateTime DiaActual
         {
             get { return _diaActual; }
-            set { _diaActual = value; }
+            set { _diaActual = new DateTime(value.Year, value.Month, 1); }
         }
 
         public dlgCalendario()
@@ -36,7 +36,47 @@ namespace GestRest
 
         private void dlgCalendario_Load(object sender, EventArgs e)
         {
-            this.tlpCenter.Controls.Add(new DateButton(DateTime.Now),2, 2);
+            //this.tlpCenter.Controls.Add(new DateButton(DateTime.Now),2, 2);
+            this.FillCalendario();
+        }
+
+        private void FillCalendario()
+        {
+            DateTime primerDia = DiaActual;
+            DateTime ultimoDia = primerDia.AddMonths(1).AddDays(-1);
+            int mesActual = primerDia.Month;
+            int diaSemana = Functions.DiaSemanaSP((int)primerDia.DayOfWeek);
+            int diasAnteriores = diaSemana-7;
+            DateTime ahoraDia = primerDia.AddDays(diasAnteriores);
+            bool bFinMes = false;
+
+            int x = 0;
+            int y = 1;
+
+            do
+            {
+                if (x == 7)
+                {
+                    x = 0;
+                    y++;
+                }
+                x++;
+
+                DateButton btnDia = new DateButton(ahoraDia);
+                this.tlpCenter.Controls.Add(btnDia, x, y);
+
+                if (ahoraDia.Month != primerDia.Month)
+                {
+                    btnDia.Enabled = false;
+                }
+
+                ahoraDia = ahoraDia.AddDays(1);
+
+                bFinMes = (ahoraDia.Month == primerDia.AddMonths(1).Month);
+            }while (!bFinMes || x!=7);
+            
+
+            //MessageBox.Show(primerDia.ToShortDateString() + "-" + primerDia.DayOfWeek.ToString());
         }
     }
 }

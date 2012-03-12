@@ -66,5 +66,185 @@ namespace GestRest.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abril.
+        /// </summary>
+        internal static string rxAbril {
+            get {
+                return ResourceManager.GetString("rxAbril", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agost.
+        /// </summary>
+        internal static string rxAgosto {
+            get {
+                return ResourceManager.GetString("rxAgosto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desembre.
+        /// </summary>
+        internal static string rxDiciembre {
+            get {
+                return ResourceManager.GetString("rxDiciembre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diumenge.
+        /// </summary>
+        internal static string rxDomingo {
+            get {
+                return ResourceManager.GetString("rxDomingo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gener.
+        /// </summary>
+        internal static string rxEnero {
+            get {
+                return ResourceManager.GetString("rxEnero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Febrer.
+        /// </summary>
+        internal static string rxFebrero {
+            get {
+                return ResourceManager.GetString("rxFebrero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dijous.
+        /// </summary>
+        internal static string rxJueves {
+            get {
+                return ResourceManager.GetString("rxJueves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Juliol.
+        /// </summary>
+        internal static string rxJulio {
+            get {
+                return ResourceManager.GetString("rxJulio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Juny.
+        /// </summary>
+        internal static string rxJunio {
+            get {
+                return ResourceManager.GetString("rxJunio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dilluns.
+        /// </summary>
+        internal static string rxLunes {
+            get {
+                return ResourceManager.GetString("rxLunes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dimarts.
+        /// </summary>
+        internal static string rxMartes {
+            get {
+                return ResourceManager.GetString("rxMartes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Març.
+        /// </summary>
+        internal static string rxMarzo {
+            get {
+                return ResourceManager.GetString("rxMarzo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maig.
+        /// </summary>
+        internal static string rxMayo {
+            get {
+                return ResourceManager.GetString("rxMayo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dimecres.
+        /// </summary>
+        internal static string rxMiercoles {
+            get {
+                return ResourceManager.GetString("rxMiercoles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to €.
+        /// </summary>
+        internal static string rxMoneda {
+            get {
+                return ResourceManager.GetString("rxMoneda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novembre.
+        /// </summary>
+        internal static string rxNoviembre {
+            get {
+                return ResourceManager.GetString("rxNoviembre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Octubre.
+        /// </summary>
+        internal static string rxOctubre {
+            get {
+                return ResourceManager.GetString("rxOctubre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dissabte.
+        /// </summary>
+        internal static string rxSabado {
+            get {
+                return ResourceManager.GetString("rxSabado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setembre.
+        /// </summary>
+        internal static string rxSetiembre {
+            get {
+                return ResourceManager.GetString("rxSetiembre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Divendres.
+        /// </summary>
+        internal static string rxViernes {
+            get {
+                return ResourceManager.GetString("rxViernes", resourceCulture);
+            }
+        }
     }
 }
