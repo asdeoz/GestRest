@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.tsmiGestion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReservas = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,6 +133,7 @@
             this.Controls.Add(this.statusMain);
             this.Controls.Add(this.tlpMain);
             this.Controls.Add(this.menuMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
