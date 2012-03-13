@@ -48,6 +48,9 @@ namespace GestRest
             Label lblDia5 = new Label();
             Label lblDia6 = new Label();
             Label lblDia7 = new Label();
+            Button btnExitDer = new Button();
+            Button btnExitIzq = new Button();
+
             // 
             // lblDia1
             // 
@@ -132,6 +135,28 @@ namespace GestRest
             lblDia7.TabIndex = 6;
             lblDia7.Text = "";
             lblDia7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExitDer
+            // 
+            btnExitDer.Dock = System.Windows.Forms.DockStyle.Fill;
+            btnExitDer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExitDer.Location = new System.Drawing.Point(950, 3);
+            btnExitDer.Name = "btnExitDer";
+            btnExitDer.Size = new System.Drawing.Size(41, 58);
+            btnExitDer.TabIndex = 0;
+            btnExitDer.UseVisualStyleBackColor = true;
+            btnExitDer.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnExitIzq
+            // 
+            btnExitIzq.Dock = System.Windows.Forms.DockStyle.Fill;
+            btnExitIzq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExitIzq.Location = new System.Drawing.Point(3, 3);
+            btnExitIzq.Name = "btnExitIzq";
+            btnExitIzq.Size = new System.Drawing.Size(38, 58);
+            btnExitIzq.TabIndex = 1;
+            btnExitIzq.UseVisualStyleBackColor = true;
+            btnExitIzq.Click += new System.EventHandler(this.btnExit_Click);
 
             lblDia1.Text = this.DiaSemanaString(Enums.Dias.Lunes);
             lblDia2.Text = this.DiaSemanaString(Enums.Dias.Martes);
@@ -141,6 +166,9 @@ namespace GestRest
             lblDia6.Text = this.DiaSemanaString(Enums.Dias.Sabado);
             lblDia7.Text = this.DiaSemanaString(Enums.Dias.Domingo);
 
+            btnExitDer.Text = Properties.Resources.rxSalir;
+            btnExitIzq.Text = Properties.Resources.rxSalir;
+
             this.tlpCenter.Controls.Add(lblDia1, 1, 0);
             this.tlpCenter.Controls.Add(lblDia2, 2, 0);
             this.tlpCenter.Controls.Add(lblDia3, 3, 0);
@@ -148,6 +176,8 @@ namespace GestRest
             this.tlpCenter.Controls.Add(lblDia5, 5, 0);
             this.tlpCenter.Controls.Add(lblDia6, 6, 0);
             this.tlpCenter.Controls.Add(lblDia7, 7, 0);
+            this.tlpCenter.Controls.Add(btnExitIzq, 0, 0);
+            this.tlpCenter.Controls.Add(btnExitDer, 8, 0);
 
             this.lblMes.Text = this.MesFechaString((Enums.Meses)this.DiaActual.Month);
         }
@@ -260,6 +290,11 @@ namespace GestRest
         {
             this.DiaActual = this.DiaActual.AddMonths(-1);
             this.FillCalendario();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

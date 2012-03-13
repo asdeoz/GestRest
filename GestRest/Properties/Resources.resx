@@ -187,4 +187,7 @@
   <data name="rxViernes" xml:space="preserve">
     <value>Divendres</value>
   </data>
+  <data name="rxSalir" xml:space="preserve">
+    <value>Sortir</value>
+  </data>
 </root>

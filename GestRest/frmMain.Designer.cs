@@ -138,6 +138,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GestRest";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
             this.tlpMain.ResumeLayout(false);
