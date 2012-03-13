@@ -100,6 +100,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Recursos\flecha_der.png" />
+    <Content Include="Recursos\flecha_izq.png" />
     <Content Include="Recursos\GestRestIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

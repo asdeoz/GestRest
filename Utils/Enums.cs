@@ -7,7 +7,7 @@ namespace Utils
 {
     public static class Enums
     {
-        public enum Dies
+        public enum Dias
         {
             Lunes = 1,
             Martes = 2,
@@ -18,7 +18,7 @@ namespace Utils
             Domingo = 7
         }
 
-        public enum Mesos
+        public enum Meses
         {
             Enero = 1,
             Febrero = 2,
