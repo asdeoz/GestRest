@@ -60,6 +60,13 @@ namespace GestRest.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap comensales {
+            get {
+                object obj = ResourceManager.GetObject("comensales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap flecha_der {
             get {
                 object obj = ResourceManager.GetObject("flecha_der", resourceCulture);
@@ -78,6 +85,27 @@ namespace GestRest.Properties {
             get {
                 object obj = ResourceManager.GetObject("GestRestIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap mesa {
+            get {
+                object obj = ResourceManager.GetObject("mesa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap persona {
+            get {
+                object obj = ResourceManager.GetObject("persona", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap reloj {
+            get {
+                object obj = ResourceManager.GetObject("reloj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

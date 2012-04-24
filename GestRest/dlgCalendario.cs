@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Utils;
+using GestRest.Reservas;
+using GestRest.CommonFunctions;
 
 namespace GestRest
 {
@@ -158,13 +160,13 @@ namespace GestRest
             btnExitIzq.UseVisualStyleBackColor = true;
             btnExitIzq.Click += new System.EventHandler(this.btnExit_Click);
 
-            lblDia1.Text = this.DiaSemanaString(Enums.Dias.Lunes);
-            lblDia2.Text = this.DiaSemanaString(Enums.Dias.Martes);
-            lblDia3.Text = this.DiaSemanaString(Enums.Dias.Miercoles);
-            lblDia4.Text = this.DiaSemanaString(Enums.Dias.Jueves);
-            lblDia5.Text = this.DiaSemanaString(Enums.Dias.Viernes);
-            lblDia6.Text = this.DiaSemanaString(Enums.Dias.Sabado);
-            lblDia7.Text = this.DiaSemanaString(Enums.Dias.Domingo);
+            lblDia1.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Lunes);
+            lblDia2.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Martes);
+            lblDia3.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Miercoles);
+            lblDia4.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Jueves);
+            lblDia5.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Viernes);
+            lblDia6.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Sabado);
+            lblDia7.Text = CommonFunctions.CF.DiaSemanaString(Enums.Dias.Domingo);
 
             btnExitDer.Text = Properties.Resources.rxSalir;
             btnExitIzq.Text = Properties.Resources.rxSalir;
@@ -179,7 +181,7 @@ namespace GestRest
             this.tlpCenter.Controls.Add(btnExitIzq, 0, 0);
             this.tlpCenter.Controls.Add(btnExitDer, 8, 0);
 
-            this.lblMes.Text = this.MesFechaString((Enums.Meses)this.DiaActual.Month);
+            this.lblMes.Text = CommonFunctions.CF.MesFechaString((Enums.Meses)this.DiaActual.Month);
         }
 
         private void FillCalendario()
@@ -205,6 +207,7 @@ namespace GestRest
                 x++;
 
                 DateButton btnDia = new DateButton(ahoraDia);
+                btnDia.Click += new EventHandler(btnDia_Click);
                 this.tlpCenter.Controls.Add(btnDia, x, y);
 
                 if (ahoraDia.Month != primerDia.Month)
@@ -219,65 +222,23 @@ namespace GestRest
             
         }
 
+        void btnDia_Click(object sender, EventArgs e)
+        {
+            DateButton btnDia;
+            if (sender.GetType() == typeof(DateButton))
+            {
+                btnDia = (DateButton)sender;
+                frmReservas oFrmReservas = new frmReservas();
+                oFrmReservas.FechaActual = btnDia.Date;
+                //oFrmReservas.MdiParent = this.MdiParent;
+                oFrmReservas.ShowDialog();
+                //this.Close();
+            }
+        }
+
         private void LimpiarCalendario()
         {
             this.tlpCenter.Controls.Clear();
-        }
-
-        public string DiaSemanaString(Enums.Dias dia)
-        {
-            switch (dia)
-            {
-                case Enums.Dias.Lunes:
-                    return Properties.Resources.rxLunes;
-                case Enums.Dias.Martes:
-                    return Properties.Resources.rxMartes;
-                case Enums.Dias.Miercoles:
-                    return Properties.Resources.rxMiercoles;
-                case Enums.Dias.Jueves:
-                    return Properties.Resources.rxJueves;
-                case Enums.Dias.Viernes:
-                    return Properties.Resources.rxViernes;
-                case Enums.Dias.Sabado:
-                    return Properties.Resources.rxSabado;
-                case Enums.Dias.Domingo:
-                    return Properties.Resources.rxDomingo;
-            }
-
-            return string.Empty;
-        }
-
-        public string MesFechaString(Enums.Meses mes)
-        {
-            switch(mes)
-            {
-                case Enums.Meses.Enero:
-                    return Properties.Resources.rxEnero;
-                case Enums.Meses.Febrero:
-                    return Properties.Resources.rxFebrero;
-                case Enums.Meses.Marzo:
-                    return Properties.Resources.rxMarzo;
-                case Enums.Meses.Abril:
-                    return Properties.Resources.rxAbril;
-                case Enums.Meses.Mayo:
-                    return Properties.Resources.rxMayo;
-                case Enums.Meses.Junio:
-                    return Properties.Resources.rxJunio;
-                case Enums.Meses.Julio:
-                    return Properties.Resources.rxJulio;
-                case Enums.Meses.Agosto:
-                    return Properties.Resources.rxAgosto;
-                case Enums.Meses.Setiembre:
-                    return Properties.Resources.rxSetiembre;
-                case Enums.Meses.Octubre:
-                    return Properties.Resources.rxOctubre;
-                case Enums.Meses.Noviembre:
-                    return Properties.Resources.rxNoviembre;
-                case Enums.Meses.Diciembre:
-                    return Properties.Resources.rxDiciembre;
-            }
-
-            return string.Empty;
         }
 
         private void btnMesSiguiente_Click(object sender, EventArgs e)
