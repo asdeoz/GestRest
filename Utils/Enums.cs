@@ -33,5 +33,12 @@ namespace Utils
             Noviembre = 11,
             Diciembre = 12
         }
+
+        public enum Turnos
+        {
+            T1 = 1,
+            T2 = 2,
+            Unic = 3
+        }
     }
 }

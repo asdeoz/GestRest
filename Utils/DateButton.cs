@@ -40,5 +40,26 @@ namespace Utils
             }
             this.Date = newDate;
         }
+
+        public DateButton(DateTime newDate, bool bHayReserva)
+        {
+            this.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            if (newDate.Date == DateTime.Now.Date)
+            {
+                this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.ForeColor = Color.Green;
+            }
+            else
+            {
+                this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+            if (bHayReserva)
+            {
+                this.ImageAlign = ContentAlignment.TopRight;
+                this.Image = Properties.Resources.personas;
+            }
+            this.Date = newDate;
+        }
     }
 }

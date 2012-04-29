@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestorDAL.cs" />
+    <Compile Include="GestorReservas.cs" />
     <Compile Include="GestRestDC.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

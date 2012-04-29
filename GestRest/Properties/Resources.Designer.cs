@@ -128,6 +128,87 @@ namespace GestRest.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel·la canvis.
+        /// </summary>
+        internal static string rxBtnCancelarEdicion {
+            get {
+                return ResourceManager.GetString("rxBtnCancelarEdicion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel·la nova.
+        /// </summary>
+        internal static string rxBtnCancelarInsercion {
+            get {
+                return ResourceManager.GetString("rxBtnCancelarInsercion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel·la reserva.
+        /// </summary>
+        internal static string rxBtnCancelarNormal {
+            get {
+                return ResourceManager.GetString("rxBtnCancelarNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guarda canvis.
+        /// </summary>
+        internal static string rxBtnModificarEdicion {
+            get {
+                return ResourceManager.GetString("rxBtnModificarEdicion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modifica reserva.
+        /// </summary>
+        internal static string rxBtnModificarNormal {
+            get {
+                return ResourceManager.GetString("rxBtnModificarNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guarda reserva.
+        /// </summary>
+        internal static string rxBtnNuevoInsercion {
+            get {
+                return ResourceManager.GetString("rxBtnNuevoInsercion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova reserva.
+        /// </summary>
+        internal static string rxBtnNuevoNormal {
+            get {
+                return ResourceManager.GetString("rxBtnNuevoNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Camp erroni.
+        /// </summary>
+        internal static string rxCampoErroneo {
+            get {
+                return ResourceManager.GetString("rxCampoErroneo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Camp incomplet.
+        /// </summary>
+        internal static string rxCampoIncompleto {
+            get {
+                return ResourceManager.GetString("rxCampoIncompleto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Desembre.
         /// </summary>
         internal static string rxDiciembre {
@@ -151,6 +232,24 @@ namespace GestRest.Properties {
         internal static string rxEnero {
             get {
                 return ResourceManager.GetString("rxEnero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El camp nom està incomplet..
+        /// </summary>
+        internal static string rxErrorCampoNombre {
+            get {
+                return ResourceManager.GetString("rxErrorCampoNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Els camps d&apos;hora i minuts no són correctes..
+        /// </summary>
+        internal static string rxErrorCamposFecha {
+            get {
+                return ResourceManager.GetString("rxErrorCamposFecha", resourceCulture);
             }
         }
         

@@ -9,11 +9,22 @@ using System.Windows.Forms;
 using Utils;
 using GestRest.Reservas;
 using GestRest.CommonFunctions;
+using GestRestDAL;
 
 namespace GestRest
 {
     public partial class dlgCalendario : Form
     {
+        Label lblDia1 = new Label();
+        Label lblDia2 = new Label();
+        Label lblDia3 = new Label();
+        Label lblDia4 = new Label();
+        Label lblDia5 = new Label();
+        Label lblDia6 = new Label();
+        Label lblDia7 = new Label();
+        Button btnExitDer = new Button();
+        Button btnExitIzq = new Button();
+
         private DateTime _diaActual;
 
         public DateTime DiaActual
@@ -25,33 +36,6 @@ namespace GestRest
         public dlgCalendario()
         {
             InitializeComponent();
-        }
-
-        private void dlgCalendario_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (Application.OpenForms.Count == 2)
-            {
-                frmMain oFrmMain = (frmMain)this.MdiParent;
-                oFrmMain.TlpMain.Visible = true;
-            }
-        }
-
-        private void dlgCalendario_Load(object sender, EventArgs e)
-        {
-            this.FillCalendario();
-        }
-
-        private void FormatCalendario()
-        {
-            Label lblDia1 = new Label();
-            Label lblDia2 = new Label();
-            Label lblDia3 = new Label();
-            Label lblDia4 = new Label();
-            Label lblDia5 = new Label();
-            Label lblDia6 = new Label();
-            Label lblDia7 = new Label();
-            Button btnExitDer = new Button();
-            Button btnExitIzq = new Button();
 
             // 
             // lblDia1
@@ -181,6 +165,24 @@ namespace GestRest
             this.tlpCenter.Controls.Add(btnExitIzq, 0, 0);
             this.tlpCenter.Controls.Add(btnExitDer, 8, 0);
 
+        }
+
+        private void dlgCalendario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.Count == 2)
+            {
+                frmMain oFrmMain = (frmMain)this.MdiParent;
+                oFrmMain.TlpMain.Visible = true;
+            }
+        }
+
+        private void dlgCalendario_Load(object sender, EventArgs e)
+        {
+            this.FillCalendario();
+        }
+
+        private void FormatCalendario()
+        {
             this.lblMes.Text = CommonFunctions.CF.MesFechaString((Enums.Meses)this.DiaActual.Month);
         }
 
@@ -188,6 +190,8 @@ namespace GestRest
         {
             this.LimpiarCalendario();
             this.FormatCalendario();
+
+            List<DateTime> lstDiasConReserva = GestorReservas.Instance.GetListaDiasConReserva(this.DiaActual);
 
             DateTime primerDia = DiaActual;
             int diaSemana = Functions.DiaSemanaSP((int)primerDia.DayOfWeek);
@@ -206,7 +210,7 @@ namespace GestRest
                 }
                 x++;
 
-                DateButton btnDia = new DateButton(ahoraDia);
+                DateButton btnDia = new DateButton(ahoraDia, (lstDiasConReserva.Contains(ahoraDia.Date)));
                 btnDia.Click += new EventHandler(btnDia_Click);
                 this.tlpCenter.Controls.Add(btnDia, x, y);
 
@@ -230,9 +234,8 @@ namespace GestRest
                 btnDia = (DateButton)sender;
                 frmReservas oFrmReservas = new frmReservas();
                 oFrmReservas.FechaActual = btnDia.Date;
-                //oFrmReservas.MdiParent = this.MdiParent;
+                oFrmReservas.WindowState = FormWindowState.Maximized;
                 oFrmReservas.ShowDialog();
-                //this.Close();
             }
         }
 
