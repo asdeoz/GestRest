@@ -273,11 +273,10 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(178, 121);
+            this.label4.Location = new System.Drawing.Point(180, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 24);
+            this.label4.Size = new System.Drawing.Size(11, 24);
             this.label4.TabIndex = 11;
             this.label4.Text = ":";
             // 
@@ -343,7 +342,7 @@
             // txtMinutos
             // 
             this.txtMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMinutos.Location = new System.Drawing.Point(192, 117);
+            this.txtMinutos.Location = new System.Drawing.Point(194, 117);
             this.txtMinutos.MaxLength = 2;
             this.txtMinutos.Name = "txtMinutos";
             this.txtMinutos.Size = new System.Drawing.Size(40, 30);

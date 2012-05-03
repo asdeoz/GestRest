@@ -172,6 +172,8 @@ namespace GestRest.Reservas
             this.fgReservas.Rows.Count = 1;
             this.fgReservas.Rows.Fixed = 1;
 
+            this.fgReservas.HighLight = HighLightEnum.Never;
+
             this.fgReservas.AllowEditing = false;
             this.fgReservas.SelectionMode = SelectionModeEnum.Row;
 
@@ -324,9 +326,9 @@ namespace GestRest.Reservas
         {
             if (r.Comensales.HasValue) this.txtComensales.Text = r.Comensales.Value.ToString();
             this.txtComentarios.Text = r.Comentarios;
-            this.txtHora.Text = string.Format("{00:D}", r.Fecha.Hour);
+            this.txtHora.Text = r.Fecha.Hour.ToString("D2");
             if (r.Mesa.HasValue) this.txtMesa.Text = r.Mesa.Value.ToString();
-            this.txtMinutos.Text = string.Format("{00:D}", r.Fecha.Minute);
+            this.txtMinutos.Text = r.Fecha.Minute.ToString("D2");
             this.txtNombre.Text = r.Nombre;
             this.txtTelefono.Text = r.Telefono;
             if(r.Turno.HasValue) this.cmbTurno.SelectedItem = (Enums.Turnos)r.Turno.Value;
